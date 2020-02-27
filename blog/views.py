@@ -1,26 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Post
 
-posts = [
-    {
-        'author': 'Jonah',
-        'title': 'Today in Tech',
-        'content': 'CONTENT OF POST',
-        'date_posted': '28th March'
-    },
-    {
-        'author': 'Jonah',
-        'title': 'Today in Tech',
-        'content': 'CONTENT OF POST',
-        'date_posted': '1st January'
-    },
-    {
-        'author': 'Jonah',
-        'title': 'Today in Tech',
-        'content': 'CONTENT OF POST',
-        'date_posted': '2nd February'
-    },
-]
+posts=Post.objects.all()
 
 
 def index(request):
